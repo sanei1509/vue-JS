@@ -1,6 +1,7 @@
 const app = Vue.createApp({
   data: function () {
     return {
+      cart: 0,
       product: "Socks",
       description: "Medias originales, muy buenas para realizar deporte.",
       image: "./assets/images/socks_blue.jpg",
@@ -18,4 +19,9 @@ const app = Vue.createApp({
       talles: ["S", "M", "L", "XL"],
     };
   },
+  methtods: {
+    addToCart(){
+      this.cart += 1;
+    }
+  }
 });
