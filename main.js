@@ -13,8 +13,8 @@ const app = Vue.createApp({
       },
       detalles: ["100% algodón", "30% lana", "20% polyester"],
       colores: [
-        { id: 1, color: "red" },
-        { id: 2, color: "blue" },
+        { id: 1, color: "red", image: "./assets/img/color.png"},
+        { id: 2, color: "blue", image: "./assets/img/color.png" },
       ],
       talles: ["S", "M", "L", "XL"],
     };
@@ -22,6 +22,9 @@ const app = Vue.createApp({
   methtods: {
     addToCart(){
       this.cart += 1;
+    },
+    updateImage(variantImage){
+      this.image = variantImage
     }
   }
 });

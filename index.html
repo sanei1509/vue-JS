@@ -36,7 +36,7 @@
           </ul>
           <!-- COLORES DEL PRODUCTO -->
           <!-- necesito que cada color tenga su id -->
-          <div class="color-tag" :key="colores.id" v-for="color in colores">{{colores.color}}</div>
+          <div class="color-tag" :key="colores.id" v-for="color in colores" @mouseover="updateImage(colores.image)">{{colores.color}}</div>
           <ul>
             <!-- voy a mostrar detalles del producto -->
             <li v-for="talle in talles">{{ talle }}</li>
