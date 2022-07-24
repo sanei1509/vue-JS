@@ -10,8 +10,27 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ product }}</h1>
-      <p>{{ description }}</p>
+      <nav class="nav-bar"></nav>
+      <div class="product-container">
+        <div class="product-image">
+          <!-- Y asi agrego la imagen como una etiqueta más -->
+          <image v-bind:src="image">
+        </div>
+        <div class="product-info">
+          <h1>{{ product }}</h1>
+          <p class="oferta-tag" v-show="oferta">Hoy en oferta!</p>
+          <p>{{ description }}</p>
+          <!-- VERIFICACIÓN DE STOCK -->
+          <p class="stock-tag" v-if="stock">Hay stock</p>
+          <p class="no-stock-tag" v-if="!stock">No Hay stock</p>
+          <p v-if="None">Consultar Stock</p>
+          <p class="pocas-unidades-tag" v-if="stock && inventory.socks <= 5">Pocas unidades</p>
+          
+          <!-- CHALLENGE 2 -->
+          <p>Sticker Random <a class="sticker-random" v-bind:href="url">aqui</a></p>
+          <img style="display: none; width: 40px; height: 40px;" v-bind:src="url">
+        </div>
+      </div>
     </div>
 
     <!-- Import Js -->

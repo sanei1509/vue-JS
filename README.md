@@ -12,9 +12,25 @@
 
 ## dentro de la instancia Vue (objeto) configuramos nuestra aplicación
 
-## Challenge
+## Challenge 1
 
-- Añadir descripción de un producto al objeto de data.
+- Añadir descripción de un producto al objeto `data`.
 - Mostrar la descripción en una TAG "p"
 
 [HECHO]
+
+## v-bind USES
+
+<img src="./assets/images/v-bind-uses.jpg.png">
+
+## Challenge 2
+
+- añadir un URL al objeto `data`
+- usando v-bind para linkear con el atributo `href`
+
+[HECHO]
+
+## Challenge 3
+
+- añadir Booleano al objeto `data`
+- Que muestre una etiqueta de oferta cuando haya una (onSale == true)
