@@ -11,3 +11,10 @@
 <img src="./assets/images/config.png" />
 
 ## dentro de la instancia Vue (objeto) configuramos nuestra aplicación
+
+## Challenge
+
+- Añadir descripción de un producto al objeto de data.
+- Mostrar la descripción en una TAG "p"
+
+[HECHO]
