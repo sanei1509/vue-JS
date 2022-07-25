@@ -10,7 +10,7 @@ body {
   background-color: #39495c;
   border-radius: 5px;
   font-size: 18px;
-  width: 160px;
+  width: 200px;
   height: 60px;
   color: white;
   padding: 20px;
@@ -22,8 +22,10 @@ body {
 }
 
 .cart {
+  position: absolute;
+  right: 0;
   margin: 25px 100px;
-  float: right;
+  /* float: right; */
   border: 1px solid #d8d8d8;
   padding: 10px 30px;
   background-color: white;
@@ -137,6 +139,18 @@ li {
   height: 20px;
   padding: 5px 5px;
   border-radius: 5px;
+}
+
+.talles-tag {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 5px;
 }
 
 p {

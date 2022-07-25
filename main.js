@@ -13,18 +13,18 @@ const app = Vue.createApp({
       },
       detalles: ["100% algodón", "30% lana", "20% polyester"],
       colores: [
-        { id: 1, color: "red", image: "./assets/img/color.png"},
-        { id: 2, color: "blue", image: "./assets/img/color.png" },
+        { id: 1, color: "blue", image: "./assets/images/socks_blue.jpg" },
+        { id: 2, color: "green", image: "./assets/images/socks_green.jpg" },
       ],
       talles: ["S", "M", "L", "XL"],
     };
   },
-  methtods: {
-    addToCart(){
+  methods: {
+    addToCart: function () {
       this.cart += 1;
     },
-    updateImage(variantImage){
-      this.image = variantImage
-    }
-  }
+    updateImage: function (imgUrl) {
+      this.image = imgUrl;
+    },
+  },
 });

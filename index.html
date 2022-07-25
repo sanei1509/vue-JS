@@ -12,7 +12,7 @@
     <div id="app">
       <nav class="nav-bar"></nav>
       <!-- CARRITO -->
-      <div class="cart">{{ cart }}</div>
+      <div class="cart">Mi carrito ({{ cart }})</div>
       <div class="product-container">
         <div class="product-image">
           <!-- Y asi agrego la imagen como una etiqueta más -->
@@ -36,13 +36,20 @@
           </ul>
           <!-- COLORES DEL PRODUCTO -->
           <!-- necesito que cada color tenga su id -->
-          <div class="color-tag" :key="colores.id" v-for="color in colores" @mouseover="updateImage(colores.image)">{{colores.color}}</div>
-          <ul>
+                <div 
+                    v-for="color in colores" 
+                    :style="{backgroundColor: color.color}" 
+                    :key="color.id" 
+                    class="color-circle" 
+                    v-on:mouseover="updateImage(color.image)"
+                    >
+                </div>
+          <ul style="display:flex">
             <!-- voy a mostrar detalles del producto -->
-            <li v-for="talle in talles">{{ talle }}</li>
+            <li class="talles-tag" v-for="talle in talles">{{ talle }}</li>
           </ul>
           <!-- AGREGAR AL CARRITO (BUTTON) -->
-          <button class="button" v-on:click="cart += 1">Agregar al carrito</button>
+          <button :class="{disabledButton: !stock}" class="button" v-on:click="addToCart()">Agregar al carrito</button>
           <!-- CHALLENGE 2 -->
           <p>Sticker Random <a class="sticker-random" v-bind:href="url">aqui</a></p>
           <img style="display: none; width: 40px; height: 40px;" v-bind:src="url">
