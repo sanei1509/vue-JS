@@ -34,3 +34,16 @@
 
 - añadir Booleano al objeto `data`
 - Que muestre una etiqueta de oferta cuando haya una (onSale == true)
+
+# Operadores ternarios para asignar clases
+
+EJ : el botón debe estar desactivado cuando no hay
+
+```c
+<button
+	class = "button"
+	:style="{!stock ? disabledButton : " "}"
+>
+
+</button>
+```
