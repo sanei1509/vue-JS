@@ -35,6 +35,8 @@
 - añadir Booleano al objeto `data`
 - Que muestre una etiqueta de oferta cuando haya una (onSale == true)
 
+[REALIZADO]
+
 # Operadores ternarios para asignar clases
 
 EJ : el botón debe estar desactivado cuando no hay
@@ -47,3 +49,14 @@ EJ : el botón debe estar desactivado cuando no hay
 
 </button>
 ```
+
+# Propiedades computadas / Computed properties
+
+podemos ver este espacio como una calculadora donde vamos a trabajar la lógica aqui dentro preparando los retorno a utilizar luego.
+
+## Challenge 4
+
+- añadir a traves de las propiedades computadas el cartel de oferta en caso de (TRUE)
+  [INTENTANDO...]
+
+## Construcción una APP en bloques con vue JS
