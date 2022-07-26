@@ -23,6 +23,10 @@ const app = Vue.createApp({
     addToCart: function () {
       this.cart += 1;
     },
+    removeOfCart: function () {
+      if (this.cart > 0) this.cart -= 1;
+      else return;
+    },
     updateImage: function (imgUrl) {
       this.image = imgUrl;
     },
