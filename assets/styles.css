@@ -34,6 +34,10 @@ body {
   width: 100px;
 }
 
+.color-container {
+  display: flex;
+}
+
 .color-circle {
   width: 50px;
   height: 50px;
@@ -104,6 +108,12 @@ li {
   opacity: 0.5;
 }
 
+/* stock container */
+.stock-container {
+  display: flex;
+  gap: 10px;
+}
+
 .stock-tag {
   text-align: center;
   color: white;
@@ -141,6 +151,8 @@ li {
 }
 
 .oferta-tag {
+  position: relative;
+  top: 28px;
   text-align: center;
   color: white;
   background: #ff8800;

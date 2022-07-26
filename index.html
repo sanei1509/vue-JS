@@ -27,15 +27,18 @@
           <image v-bind:src="image">
         </div>
         <div class="product-info">
-          <h1>{{ product }}</h1>
           <p class="oferta-tag" v-show="oferta">Hoy en oferta!</p>
+          <h1>{{ title }}</h1>
           <p>{{ description }}</p>
 
           <!-- VERIFICACIÓN DE STOCK -->
-          <p class="stock-tag" v-if="stock">Hay stock</p>
+          <div class="stock-container">            
+            <p class="stock-tag" v-if="stock">Hay stock</p>
+            <p class="pocas-unidades-tag" v-if="stock && inventory.socks <= 5">Pocas unidades</p>
+          </div>
           <p class="no-stock-tag" v-if="!stock">No Hay stock</p>
           <p v-if="None">Consultar Stock</p>
-          <p class="pocas-unidades-tag" v-if="stock && inventory.socks <= 5">Pocas unidades</p>
+          
           
           <!-- DETALLES PRODUCTO -->
           <ul>
@@ -43,15 +46,16 @@
             <li v-for="detalle in detalles">{{ detalle }}</li>
           </ul>
           <!-- COLORES DEL PRODUCTO -->
-          <!-- necesito que cada color tenga su id -->
-                <div 
-                    v-for="color in colores" 
-                    :style="{backgroundColor: color.color}" 
-                    :key="color.id" 
-                    class="color-circle" 
-                    v-on:mouseover="updateImage(color.image)"
-                    >
-                </div>
+          <div class="color-container">
+            <div 
+                v-for="(color, index) in colores" 
+                :style="{backgroundColor: color.color}" 
+                :key="color.id" 
+                class="color-circle" 
+                v-on:mouseover="updateColor(index)"
+                >
+            </div>
+          </div>
           <ul style="display:flex">
             <!-- voy a mostrar detalles del producto -->
             <li class="talles-tag" v-for="talle in talles">{{ talle }}</li>
