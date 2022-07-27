@@ -12,65 +12,23 @@
     <div id="app">
       <nav class="nav-bar"></nav>
       <!-- CARRITO -->
-      
-      
+
       <div class="cart">Mi carrito ({{ cart }})</div>
       <div class="container-cart-button">
         <button class="decr-button" @click="removeOfCart()">-</button>
         <button class="incr-button" @click="addToCart()">+</button>
       </div>
 
-
-      <div class="product-container">
-        <div class="product-image">
-          <!-- Y asi agrego la imagen como una etiqueta más -->
-          <image v-bind:src="image">
-        </div>
-        <div class="product-info">
-          <p class="oferta-tag" v-show="oferta">Hoy en oferta!</p>
-          <h1>{{ title }}</h1>
-          <p>{{ description }}</p>
-
-          <!-- VERIFICACIÓN DE STOCK -->
-          <div class="stock-container">            
-            <p class="stock-tag" v-if="stock">Hay stock</p>
-            <p class="pocas-unidades-tag" v-if="stock && inventory.socks <= 5">Pocas unidades</p>
-          </div>
-          <p class="no-stock-tag" v-if="!stock">No Hay stock</p>
-          <p v-if="None">Consultar Stock</p>
-          
-          
-          <!-- DETALLES PRODUCTO -->
-          <ul>
-            <!-- voy a mostrar detalles del producto -->
-            <li v-for="detalle in detalles">{{ detalle }}</li>
-          </ul>
-          <!-- COLORES DEL PRODUCTO -->
-          <div class="color-container">
-            <div 
-                v-for="(color, index) in colores" 
-                :style="{backgroundColor: color.color}" 
-                :key="color.id" 
-                class="color-circle" 
-                v-on:click="updateColor(index)"
-                >
-            </div>
-          </div>
-          <ul style="display:flex">
-            <!-- voy a mostrar detalles del producto -->
-            <li class="talles-tag" v-for="talle in talles">{{ talle }}</li>
-          </ul>
-          <!-- AGREGAR AL CARRITO (BUTTON) -->
-          <button :class="{disabledButton: !stock}" class="button" v-on:click="addToCart()">Agregar al carrito</button>
-          <!-- CHALLENGE 2 -->
-          <p>Sticker Random <a class="sticker-random" v-bind:href="url">aqui</a></p>
-          <img style="display: none; width: 40px; height: 40px;" v-bind:src="url">
-        </div>
-      </div>
+      <Producto :pro="pro"></Producto>
+      <!-- <Producto></Producto> -->
+      <!-- <Producto></Producto> -->
     </div>
 
-    <!-- Import Js -->
+    <!-- IMPORTAMOS JS -->
     <script src="./main.js"></script>
+    <!-- IMPORTAMOS COMPONENTES -->
+    <script src="./components/Producto.js"></script>
+    <!-- <script src="./ProductDetails.js"></script> -->
     <!-- Montando la aplicacion -->
     <script>
       const mountApp = app.mount("#app");

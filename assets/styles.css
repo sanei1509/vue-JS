@@ -190,6 +190,8 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* box-shadow: 2px 1px 22px rgba(0, 0, 0, 0.2); */
+  border-bottom: 1px solid #ccc;
 }
 
 .product-image,
