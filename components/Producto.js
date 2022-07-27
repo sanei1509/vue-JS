@@ -86,17 +86,8 @@ app.component("Producto", {
   },
   methods: {
     addToCart: function () {
-      if (this.cart < 9) {
-        this.cart += 1;
-      }
+      this.$emit("add-to-cart", this.colores[this.colorSeleccionado].id);
     },
-    removeOfCart: function () {
-      if (this.cart > 0) this.cart -= 1;
-      else return;
-    },
-    // updateImage: function (imgUrl) {
-    //   this.image = imgUrl;
-    // },   REFACTOR -> update NEW
     updateColor(index) {
       this.colorSeleccionado = index;
     },

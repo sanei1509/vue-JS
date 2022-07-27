@@ -13,13 +13,13 @@
       <nav class="nav-bar"></nav>
       <!-- CARRITO -->
 
-      <div class="cart">Mi carrito ({{ cart }})</div>
+      <div class="cart">Mi carrito ({{ cart.length }})</div>
       <div class="container-cart-button">
         <button class="decr-button" @click="removeOfCart()">-</button>
-        <button class="incr-button" @click="addToCart()">+</button>
+        <button class="incr-button" @click="updateCart()">+</button>
       </div>
 
-      <Producto :pro="pro"></Producto>
+      <Producto :pro="pro" @add-to-cart="updateCart"></Producto>
       <!-- <Producto></Producto> -->
       <!-- <Producto></Producto> -->
     </div>

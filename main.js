@@ -1,11 +1,16 @@
 const app = Vue.createApp({
   data: function () {
     return {
-      cart: 0,
-      image: "./assets/images/socks_blue.jpg",
+      cart: [],
       pro: true,
     };
   },
-  methods: {},
-  computed: {},
+  methods: {
+    updateCart(id) {
+      if (this.cart < 9) this.cart.push(id);
+    },
+    removeOfCart() {
+      this.cart.pop();
+    },
+  },
 });
