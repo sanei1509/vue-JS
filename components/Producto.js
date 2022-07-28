@@ -44,7 +44,7 @@ app.component("Producto", {
 
 	  <ul style="display:flex">
 		<!-- voy a mostrar detalles del producto -->
-		<li class="talles-tag" v-for="talle in talles">{{ talle }}</li>
+		<li class="talles-tag" v-for="(talle, index) in talles" @click="e => e.target.classList.toggle('talle-seleccionado')">{{ talle }}</li>
 	  </ul>
 	  <!-- AGREGAR AL CARRITO (BUTTON) -->
 	  <button :class="{disabledButton: !stock}" class="button" v-on:click="addToCart()">Agregar al carrito</button>
@@ -90,6 +90,9 @@ app.component("Producto", {
     },
     updateColor(index) {
       this.colorSeleccionado = index;
+    },
+    talleDisplay(talle) {
+      console.log(talle.textContent);
     },
   },
   computed: {

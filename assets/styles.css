@@ -165,6 +165,7 @@ li {
 }
 
 .talles-tag {
+  cursor: pointer;
   width: 30px;
   height: 30px;
   padding: 5px;
@@ -172,6 +173,18 @@ li {
   border-radius: 100%;
   text-align: center;
   background-color: #fff;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 5px;
+}
+
+.talle-seleccionado {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: rgb(155 155 155);
   box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
   margin: 0 5px;
 }
@@ -191,7 +204,7 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   /* box-shadow: 2px 1px 22px rgba(0, 0, 0, 0.2); */
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
 }
 
 .product-image,

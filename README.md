@@ -85,3 +85,11 @@ Un atributo para pasar datos a usar dentro de un componente.
 
 - Crear un nuevo componente "ProductDetail"
 - Que reciba los detalles a traves de una prop "details"
+
+[No pude je]
+
+## challenge 6
+
+-Crear un botton que retire el último el elemento añadido al carrito.
+
+[HECHO]
