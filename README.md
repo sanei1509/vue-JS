@@ -1,5 +1,9 @@
 # introducción a vue JS
 
+## Link al proyecto completo
+
+(proyecto-desplegado)[https://tienda-vue-project.netlify.app/]
+
 ## mediante un proyecto de la manera más simple de utilizarlo en uno.
 
 ## agregando su CDN dentro de head(tag) AQUI head(tag)
