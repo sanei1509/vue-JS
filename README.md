@@ -2,7 +2,7 @@
 
 ## Link al proyecto completo
 
-(proyecto-desplegado)[https://tienda-vue-project.netlify.app/]
+[proyecto-desplegado] (https://tienda-vue-project.netlify.app/)
 
 ## mediante un proyecto de la manera más simple de utilizarlo en uno.
 
