@@ -6,7 +6,9 @@ app.component("Producto", {
       required: true,
     },
   },
-  template: `<div class="product-container">
+  template:
+    /*HTML*/
+    `<div class="product-container">
 	<div class="product-image">
 	  <!-- Y asi agrego la imagen como una etiqueta más -->
 	  <img v-bind:src="image" />
@@ -50,6 +52,9 @@ app.component("Producto", {
 	  <button :class="{disabledButton: !stock}" class="button" v-on:click="addToCart()">Agregar al carrito</button>
 	  <!-- CHALLENGE 2 -->
 	</div>
+  <ReviewLists v-if="reviews.length != 0" :reviews="reviews"></ReviewLists>
+
+  <ReviewForm @review-enviada="addReview"></ReviewForm>
   </div>
   `,
   data: function () {
@@ -82,6 +87,7 @@ app.component("Producto", {
         },
       ],
       talles: ["S", "M", "L", "XL"],
+      reviews: [],
     };
   },
   methods: {
@@ -93,6 +99,10 @@ app.component("Producto", {
     },
     talleDisplay(talle) {
       console.log(talle.textContent);
+    },
+    addReview(review) {
+      // review es un payload es la transferencia que vamos a guardar
+      this.reviews.push(review);
     },
   },
   computed: {

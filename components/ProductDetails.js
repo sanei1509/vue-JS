@@ -2,10 +2,12 @@ app.component("ProductoDetalles", {
   props: {
     detalles: {
       type: Array,
-      require: true,
+      require: false,
     },
   },
-  template: `
+  template:
+    /*HTML*/
+    `
 	<!-- DETALLES PRODUCTO -->
 	<ul>
 	  <!-- voy a mostrar detalles del producto -->
